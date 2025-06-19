@@ -3,10 +3,10 @@ Plecs {
   Version       "4.9"
   CircuitModel  "ContStateSpace"
   StartTime     "0.0"
-  TimeSpan      "10"
+  TimeSpan      "3"
   Timeout       ""
   Solver        "auto"
-  MaxStep       "1e-3"
+  MaxStep       "1e-1"
   InitStep      "-1"
   FixedStep     "1e-3"
   Refine        "1"
@@ -53,9 +53,9 @@ Plecs {
   ScriptsDialogGeometry ""
   ScriptsDialogSplitterPos "0"
   Schematic {
-    Location      [0, 23; 1536, 773]
-    ZoomFactor    0.667275
-    SliderPosition [0, 0]
+    Location      [0, 26; 1536, 776]
+    ZoomFactor    1.30957
+    SliderPosition [-1, 455]
     ShowBrowser   off
     BrowserWidth  100
     Component {
@@ -179,20 +179,6 @@ Plecs {
       }
     }
     Component {
-      Type          Resistor
-      Name          "R1"
-      Show          on
-      Position      [1750, 605]
-      Direction     up
-      Flipped       off
-      LabelPosition eastSoutheast
-      Parameter {
-        Variable      "R"
-        Value         "R"
-        Show          off
-      }
-    }
-    Component {
       Type          Voltmeter
       Name          "Vm1"
       Show          on
@@ -205,20 +191,20 @@ Plecs {
       Type          Scope
       Name          "Scope"
       Show          on
-      Position      [1970, 470]
+      Position      [1970, 460]
       Direction     up
       Flipped       off
       LabelPosition south
       Location      [0, 30; 1536, 853]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAAIYA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
-"///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAYAAAAAvfw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAABgAAAABQAP///wAABgAAAAJbAAAA"
+"///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAYAAAAAhPw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAABgAAAABQAP///wAABgAAAAKUAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
-      HeaderState   "{\"DefaultSecSize\":100,\"FirstSecSize\":177,\"Labels\":["
-"],\"VisualIdxs\":[]}"
+      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":177,\"Labels\":[],"
+"\"VisualIdxs\":[]}"
       PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA"
 "AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
 "=="
@@ -230,7 +216,7 @@ Plecs {
       Ts            "-1"
       SampleLimit   "0"
       XAxisLabel    "Time / s"
-      ShowLegend    "1"
+      ShowLegend    "2"
       Axis {
         Name          "Plot 1"
         AutoScale     1
@@ -997,7 +983,7 @@ Plecs {
       LabelPosition south
       Parameter {
         Variable      "Time"
-        Value         "2.5"
+        Value         "0"
         Show          off
       }
       Parameter {
@@ -1193,11 +1179,11 @@ Plecs {
       Direction     up
       Flipped       off
       LabelPosition south
-      Location      [0, 23; 1536, 795]
+      Location      [0, 26; 1536, 816]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAADYA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
 "///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABQAP///wAABgAAAALpAAAA"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABQAP///wAABgAAAAL7AAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
@@ -1208,7 +1194,7 @@ Plecs {
       TimeRange     "0.0"
       ScrollingMode "1"
       SingleTimeAxis "1"
-      Open          "1"
+      Open          "0"
       Ts            "-1"
       SampleLimit   "0"
       XAxisLabel    "Time / s"
@@ -1242,6 +1228,61 @@ Plecs {
         }
       }
     }
+    Component {
+      Type          Reference
+      SrcComponent  "Components/Electrical/Passive Components/R3"
+      Name          "R3"
+      Show          on
+      Position      [1750, 605]
+      Direction     down
+      Flipped       on
+      LabelPosition west
+      Frame         [-8, -15; 8, 15]
+      Terminal {
+        Type          Port
+        Position      [0, -20]
+        Direction     up
+      }
+      Terminal {
+        Type          Port
+        Position      [0, 20]
+        Direction     down
+      }
+      Terminal {
+        Type          Input
+        Position      [-10, 10]
+        Direction     left
+      }
+    }
+    Component {
+      Type          Step
+      Name          "Step1"
+      Show          on
+      Position      [1785, 755]
+      Direction     up
+      Flipped       off
+      LabelPosition east
+      Parameter {
+        Variable      "Time"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "Before"
+        Value         "1.2"
+        Show          off
+      }
+      Parameter {
+        Variable      "After"
+        Value         "2.4"
+        Show          off
+      }
+      Parameter {
+        Variable      "DataType"
+        Value         "10"
+        Show          off
+      }
+    }
     Connection {
       Type          Wire
       SrcComponent  "FETD1"
@@ -1260,7 +1301,7 @@ Plecs {
         }
       }
       Branch {
-        Points        [1285, 705]
+        Points        [1290, 705]
         Branch {
           Points        [1630, 705]
           Branch {
@@ -1270,7 +1311,7 @@ Plecs {
           Branch {
             Points        [1750, 705]
             Branch {
-              DstComponent  "R1"
+              DstComponent  "R3"
               DstTerminal   2
             }
             Branch {
@@ -1281,6 +1322,7 @@ Plecs {
           }
         }
         Branch {
+          Points        [1290, 630]
           DstComponent  "Vl"
           DstTerminal   2
         }
@@ -1298,7 +1340,7 @@ Plecs {
       Branch {
         Points        [1750, 515]
         Branch {
-          DstComponent  "R1"
+          DstComponent  "R3"
           DstTerminal   1
         }
         Branch {
@@ -1370,6 +1412,7 @@ Plecs {
       Type          Signal
       SrcComponent  "From"
       SrcTerminal   1
+      Points        [1930, 460; 1930, 450]
       DstComponent  "Scope"
       DstTerminal   1
     }
@@ -1385,6 +1428,7 @@ Plecs {
       Type          Signal
       SrcComponent  "From1"
       SrcTerminal   1
+      Points        [1935, 470; 1935, 460]
       DstComponent  "Scope"
       DstTerminal   2
     }
@@ -1399,6 +1443,7 @@ Plecs {
       Type          Signal
       SrcComponent  "From2"
       SrcTerminal   1
+      Points        [1940, 480]
       DstComponent  "Scope"
       DstTerminal   3
     }
@@ -1535,6 +1580,14 @@ Plecs {
       SrcTerminal   3
       DstComponent  "Scope3"
       DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Step1"
+      SrcTerminal   1
+      Points        [1785, 615]
+      DstComponent  "R3"
+      DstTerminal   3
     }
     RectangleAnnotation {
       Position     [265, 815]
