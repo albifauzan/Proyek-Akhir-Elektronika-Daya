@@ -1,9 +1,9 @@
 %parameter system
 vin = 36;
-vo = 3.3;
-R = 1.2;
+vo = 5;
+R = 2.2;
 fsw = 100e3;
-perc_I = 20;
+perc_I = 10;
 perc_V = 2;
 Io=vo/R;
 dI = (perc_I/100)*Io;

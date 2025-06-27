@@ -3,7 +3,7 @@ Plecs {
   Version       "4.9"
   CircuitModel  "ContStateSpace"
   StartTime     "0.0"
-  TimeSpan      "3"
+  TimeSpan      "0.1"
   Timeout       ""
   Solver        "auto"
   MaxStep       "1e-1"
@@ -55,7 +55,7 @@ Plecs {
   Schematic {
     Location      [0, 26; 1536, 776]
     ZoomFactor    1.30957
-    SliderPosition [-1, 455]
+    SliderPosition [301, 455]
     ShowBrowser   off
     BrowserWidth  100
     Component {
@@ -169,7 +169,7 @@ Plecs {
       LabelPosition west
       Parameter {
         Variable      "C"
-        Value         "3*C"
+        Value         "3*L"
         Show          off
       }
       Parameter {
@@ -198,8 +198,8 @@ Plecs {
       Location      [0, 30; 1536, 853]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAAIYA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
-"///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAYAAAAAhPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAABgAAAABQAP///wAABgAAAAKUAAAA"
+"///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAYAAAAAdfw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAABgAAAABQAP///wAABgAAAAKjAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
@@ -516,7 +516,7 @@ Plecs {
       Type          Sum
       Name          "Sum"
       Show          off
-      Position      [710, 765]
+      Position      [715, 765]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -546,7 +546,7 @@ Plecs {
       SrcComponent  "Components/Control/Continuous/Continuous PID\\nController"
       Name          "Continuous PID\nController"
       Show          on
-      Position      [620, 765]
+      Position      [625, 765]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -563,7 +563,7 @@ Plecs {
       }
       Parameter {
         Variable      "kp"
-        Value         "7*Kp"
+        Value         "22*Kp"
         Show          off
       }
       Parameter {
@@ -692,7 +692,7 @@ Plecs {
       SrcComponent  "Components/Control/Continuous/Continuous PID\\nController"
       Name          "Continuous PID\nController1"
       Show          on
-      Position      [355, 765]
+      Position      [360, 765]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -709,12 +709,12 @@ Plecs {
       }
       Parameter {
         Variable      "kp"
-        Value         "2*Kp"
+        Value         "8*Kp"
         Show          off
       }
       Parameter {
         Variable      "ki"
-        Value         "Ki"
+        Value         "3*Ki"
         Show          off
       }
       Parameter {
@@ -837,7 +837,7 @@ Plecs {
       Type          Sum
       Name          "Sum1"
       Show          off
-      Position      [480, 765]
+      Position      [485, 765]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -866,7 +866,7 @@ Plecs {
       Type          Sum
       Name          "Sum2"
       Show          off
-      Position      [235, 765]
+      Position      [240, 765]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -895,7 +895,7 @@ Plecs {
       Type          Gain
       Name          "Gain1"
       Show          on
-      Position      [590, 850]
+      Position      [595, 850]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -929,7 +929,7 @@ Plecs {
       Type          From
       Name          "From3"
       Show          off
-      Position      [420, 850]
+      Position      [425, 850]
       Direction     right
       Flipped       off
       LabelPosition southSoutheast
@@ -953,7 +953,7 @@ Plecs {
       Type          From
       Name          "From4"
       Show          off
-      Position      [195, 850]
+      Position      [200, 850]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -977,7 +977,7 @@ Plecs {
       Type          Step
       Name          "Step"
       Show          on
-      Position      [165, 765]
+      Position      [170, 765]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -1089,11 +1089,11 @@ Plecs {
       Direction     up
       Flipped       off
       LabelPosition south
-      Location      [448, 168; 798, 413]
+      Location      [448, 168; 798, 431]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAADYA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
 "///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABQAP///wAAAV4AAADaAAAA"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABQAP///wAAAV4AAADsAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
@@ -1142,7 +1142,7 @@ Plecs {
       Type          From
       Name          "From5"
       Show          off
-      Position      [690, 695]
+      Position      [695, 695]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -1465,7 +1465,7 @@ Plecs {
       Type          Signal
       SrcComponent  "From3"
       SrcTerminal   1
-      Points        [480, 850]
+      Points        [485, 850]
       Branch {
         DstComponent  "Gain1"
         DstTerminal   1
@@ -1486,7 +1486,7 @@ Plecs {
       Type          Signal
       SrcComponent  "From4"
       SrcTerminal   1
-      Points        [235, 850]
+      Points        [240, 850]
       DstComponent  "Sum2"
       DstTerminal   3
     }
@@ -1555,7 +1555,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Gain1"
       SrcTerminal   2
-      Points        [710, 850]
+      Points        [715, 850]
       DstComponent  "Sum"
       DstTerminal   4
     }
@@ -1563,7 +1563,7 @@ Plecs {
       Type          Signal
       SrcComponent  "From5"
       SrcTerminal   1
-      Points        [710, 695]
+      Points        [715, 695]
       DstComponent  "Sum"
       DstTerminal   2
     }
@@ -1590,7 +1590,7 @@ Plecs {
       DstTerminal   3
     }
     RectangleAnnotation {
-      Position     [265, 815]
+      Position     [270, 815]
       Width        270
       Height       170
       CornerRadius 3
@@ -1602,10 +1602,10 @@ Plecs {
     } 
     Annotation {
       Name          "<html><body>\n<p>Outer Loop</p></body></html>"
-      Position      [260, 715]
+      Position      [265, 715]
     } 
     RectangleAnnotation {
-      Position     [600, 815]
+      Position     [605, 815]
       Width        380
       Height       170
       CornerRadius 3
@@ -1617,7 +1617,7 @@ Plecs {
     } 
     Annotation {
       Name          "<html><body>\n<p>Inner Loop</p></body></html>"
-      Position      [595, 715]
+      Position      [600, 715]
     } 
     Annotation {
       Name          "<html><body>\n<p><span style=\" font-size:17px; font-weig"
